@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cursio AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">C</div>
+            <span>Cursio</span>
+        </div>
+
+        <button class="new-chat" onclick="newChat()">
+            <span>+</span>
+            New Chat
+        </button>
+
+        <div class="sidebar-title">
+            AI Assistant
+        </div>
+
+        <div class="sidebar-info">
+            <p>Powered by</p>
+            <strong>Gemini 2.5 Flash</strong>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <h1>Cursio AI</h1>
+                <p>Your intelligent AI assistant</p>
+            </div>
+
+            <div class="connection">
+                <span class="connection-dot"></span>
+                Online
+            </div>
+
+        </header>
+
+
+        <!-- CHAT -->
+        <section id="chatBox" class="chat-box">
+
+            <!-- Welcome message -->
+            <div class="message bot-message">
+
+                <div class="avatar">
+                    C
+                </div>
+
+                <div class="message-body">
+
+                    <div class="name">
+                        Cursio
+                    </div>
+
+                    <div class="bubble">
+                        <p>
+                            Hello! 👋
+                        </p>
+
+                        <p>
+                            I'm Cursio, your AI assistant.
+                            Ask me anything and I'll try my best to help you.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INPUT -->
+        <div class="input-container">
+
+            <div class="input-box">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Message Cursio..."
+                    rows="1"
+                    autocomplete="off"
+                ></textarea>
+
+                <button
+                    id="sendButton"
+                    onclick="sendMessage()"
+                    title="Send message"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                Cursio can make mistakes. Check important information.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
