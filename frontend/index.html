@@ -14,83 +14,213 @@
 
 <div class="app">
 
-    <!-- SIDEBAR -->
+    <!-- ================= SIDEBAR ================= -->
+
     <aside class="sidebar">
 
-        <div class="logo">
-            <div class="logo-icon">C</div>
-            <span>Cursio</span>
+        <div class="brand">
+
+            <div class="brand-icon">
+                <span>C</span>
+            </div>
+
+            <div class="brand-text">
+                <span class="brand-name">Cursio</span>
+                <span class="brand-version">AI Assistant</span>
+            </div>
+
         </div>
 
+
         <button class="new-chat" onclick="newChat()">
-            <span>+</span>
-            New Chat
+
+            <span class="new-chat-icon">+</span>
+
+            <span>New conversation</span>
+
+            <span class="new-chat-shortcut">⌘ N</span>
+
         </button>
 
+
         <!-- AUTH -->
+
         <div class="auth-section">
+
+            <div class="auth-label">
+                ACCOUNT
+            </div>
 
             <button
                     id="loginButton"
                     class="auth-button"
                     onclick="openAuthModal('login')">
-                Login
+
+                <span class="auth-icon">↪</span>
+                <span>Sign in</span>
+
             </button>
+
 
             <button
                     id="registerButton"
                     class="auth-button register-button"
                     onclick="openAuthModal('register')">
-                Register
+
+                <span class="auth-icon">✦</span>
+                <span>Create account</span>
+
             </button>
+
 
             <button
                     id="logoutButton"
                     class="auth-button logout-button"
                     onclick="logoutUser()"
                     style="display:none;">
-                Logout
+
+                <span class="auth-icon">↪</span>
+                <span>Sign out</span>
+
             </button>
 
+
             <div id="userStatus" class="user-status">
-                Not logged in
+                <span class="status-dot"></span>
+                <span>Not logged in</span>
             </div>
 
         </div>
 
-        <div class="sidebar-title">
-            AI Assistant
+
+        <div class="sidebar-divider"></div>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-section-title">
+                WORKSPACE
+            </div>
+
+            <div class="sidebar-item active">
+
+                <span class="sidebar-item-icon">✧</span>
+
+                <span>AI Assistant</span>
+
+            </div>
+
         </div>
 
-        <div class="sidebar-info">
-            <p>Powered by</p>
-            <strong>Gemini 2.5 Flash</strong>
+
+        <!-- BOTTOM INFO -->
+
+        <div class="sidebar-bottom">
+
+            <div class="model-card">
+
+                <div class="model-icon">
+                    ✦
+                </div>
+
+                <div class="model-info">
+
+                    <span class="model-label">
+                        POWERED BY
+                    </span>
+
+                    <strong>
+                        Gemini 2.5 Flash
+                    </strong>
+
+                </div>
+
+                <span class="model-status"></span>
+
+            </div>
+
+
+            <div class="sidebar-footer">
+
+                <span>© 2026 Cursio</span>
+
+                <span>•</span>
+
+                <span>AI Assistant</span>
+
+            </div>
+
         </div>
 
     </aside>
 
 
-    <!-- MAIN -->
+    <!-- ================= MAIN ================= -->
+
     <main class="main">
 
+
         <!-- HEADER -->
+
         <header class="header">
 
-            <div>
-                <h1>Cursio AI</h1>
-                <p>Your intelligent AI assistant</p>
+            <div class="header-left">
+
+                <div class="mobile-brand">
+                    <div class="mobile-brand-icon">C</div>
+                    <span>Cursio</span>
+                </div>
+
+                <div class="header-title">
+
+                    <h1>
+                        Cursio AI
+                    </h1>
+
+                    <p>
+                        Your intelligent AI assistant
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="connection">
-                <span class="connection-dot"></span>
-                Online
+
+            <div class="header-right">
+
+                <div class="connection">
+
+                    <span class="connection-dot"></span>
+
+                    <span>Online</span>
+
+                </div>
+
             </div>
 
         </header>
 
 
-        <!-- CHAT -->
+        <!-- ================= CHAT ================= -->
+
         <section id="chatBox" class="chat-box">
+
+            <div class="welcome-container">
+
+                <div class="welcome-icon">
+                    C
+                </div>
+
+                <div class="welcome-title">
+                    Welcome to Cursio
+                </div>
+
+                <div class="welcome-subtitle">
+                    Your intelligent AI assistant
+                </div>
+
+            </div>
+
 
             <div class="message bot-message">
 
@@ -98,11 +228,21 @@
                     C
                 </div>
 
+
                 <div class="message-body">
 
-                    <div class="name">
-                        Cursio
+                    <div class="message-meta">
+
+                        <div class="name">
+                            Cursio
+                        </div>
+
+                        <div class="message-time">
+                            AI
+                        </div>
+
                     </div>
+
 
                     <div class="bubble">
 
@@ -124,30 +264,51 @@
         </section>
 
 
-        <!-- INPUT -->
+        <!-- ================= INPUT ================= -->
+
         <div class="input-container">
 
-            <div class="input-box">
+            <div class="input-wrapper">
 
-                <textarea
-                        id="messageInput"
-                        placeholder="Message Cursio..."
-                        rows="1"
-                        autocomplete="off"></textarea>
+                <div class="input-box">
 
-                <button
-                        id="sendButton"
-                        onclick="sendMessage()"
-                        title="Send message">
+                    <textarea
+                            id="messageInput"
+                            placeholder="Message Cursio..."
+                            rows="1"
+                            autocomplete="off"></textarea>
 
-                    ➤
 
-                </button>
+                    <button
+                            id="sendButton"
+                            onclick="sendMessage()"
+                            title="Send message"
+                            aria-label="Send message">
+
+                        <span>↑</span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="input-footer">
+
+                    <span>
+                        ↵ Enter to send
+                    </span>
+
+                    <span>
+                        Shift + Enter for new line
+                    </span>
+
+                </div>
 
             </div>
 
+
             <p class="disclaimer">
-                Cursio can make mistakes. Check important information.
+                Cursio may make mistakes. Check important information.
             </p>
 
         </div>
@@ -165,19 +326,35 @@
 
     <div class="modal-content">
 
+
         <button
                 class="close-button"
-                onclick="closeAuthModal()">
+                onclick="closeAuthModal()"
+                aria-label="Close">
+
             ×
+
         </button>
 
-        <div class="modal-logo">
-            C
+
+        <div class="modal-top">
+
+            <div class="modal-logo">
+                C
+            </div>
+
+            <div class="security-badge">
+                <span>●</span>
+                Secure authentication
+            </div>
+
         </div>
+
 
         <h2 id="authTitle">
             Login to Cursio
         </h2>
+
 
         <p id="authSubtitle">
             Welcome back!
@@ -186,17 +363,27 @@
 
         <form id="authForm">
 
+
             <div class="form-group">
 
                 <label for="username">
                     Username
                 </label>
 
-                <input
-                        type="text"
-                        id="username"
-                        placeholder="Enter username"
-                        required>
+                <div class="input-field">
+
+                    <span class="field-icon">
+                        @
+                    </span>
+
+                    <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required>
+
+                </div>
 
             </div>
 
@@ -207,11 +394,20 @@
                     Password
                 </label>
 
-                <input
-                        type="password"
-                        id="password"
-                        placeholder="Enter password"
-                        required>
+                <div class="input-field">
+
+                    <span class="field-icon">
+                        ◈
+                    </span>
+
+                    <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
+
+                </div>
 
             </div>
 
@@ -221,7 +417,11 @@
                     id="authSubmitButton"
                     class="auth-submit">
 
-                Login
+                <span>Login</span>
+
+                <span class="submit-arrow">
+                    →
+                </span>
 
             </button>
 
@@ -245,9 +445,21 @@
 
         </div>
 
+
         <div
                 id="authError"
                 class="auth-error">
+        </div>
+
+
+        <div class="modal-security">
+
+            <span>🔒</span>
+
+            <span>
+                Your connection is protected
+            </span>
+
         </div>
 
     </div>
