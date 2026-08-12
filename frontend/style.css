@@ -486,3 +486,366 @@ textarea::placeholder {
         max-width: 85%;
     }
 }
+/* =====================================================
+   AUTHENTICATION
+   ===================================================== */
+
+.auth-section {
+    margin-top: 15px;
+}
+
+
+.auth-button {
+    width: 100%;
+
+    border: 1px solid #374151;
+
+    background: #1f2937;
+
+    color: white;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+    transition: 0.2s;
+}
+
+
+.auth-button:hover {
+    background: #374151;
+}
+
+
+.register-button {
+    background: #2563eb;
+
+    border-color: #2563eb;
+}
+
+
+.register-button:hover {
+    background: #1d4ed8;
+}
+
+
+.logout-button {
+    background: #7f1d1d;
+
+    border-color: #7f1d1d;
+}
+
+
+.logout-button:hover {
+    background: #991b1b;
+}
+
+
+.user-status {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+    word-break: break-word;
+}
+/* =====================================================
+   AUTH SECTION
+   ===================================================== */
+
+.auth-section {
+    margin-top: 15px;
+}
+
+.auth-button {
+    width: 100%;
+    border: 1px solid #374151;
+    background: #1f2937;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+
+.auth-button:hover {
+    background: #374151;
+}
+
+.register-button {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+.register-button:hover {
+    background: #1d4ed8;
+}
+
+.logout-button {
+    background: #7f1d1d;
+    border-color: #7f1d1d;
+}
+
+.logout-button:hover {
+    background: #991b1b;
+}
+
+.user-status {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 5px;
+    word-break: break-word;
+}
+
+
+/* =====================================================
+   AUTH MODAL
+   ===================================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 400px;
+
+    max-width: 90%;
+
+    background: #111827;
+
+    border: 1px solid #273244;
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #94a3b8;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+.close-button:hover {
+    color: white;
+}
+
+.modal-logo {
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 15px;
+
+    background: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin: 0 auto 20px;
+}
+
+.modal-content h2 {
+    text-align: center;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.modal-content > p {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: #1e293b;
+
+    border: 1px solid #374151;
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+}
+
+.form-group input::placeholder {
+    color: #64748b;
+}
+
+
+/* SUBMIT */
+
+.auth-submit {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-top: 5px;
+
+    transition: 0.2s;
+}
+
+.auth-submit:hover {
+    background: #1d4ed8;
+}
+
+
+/* SWITCH */
+
+.auth-switch {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+.auth-switch button {
+    border: none;
+
+    background: transparent;
+
+    color: #60a5fa;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    margin-left: 4px;
+}
+
+.auth-switch button:hover {
+    text-decoration: underline;
+}
+
+
+/* ERROR */
+
+.auth-error {
+    text-align: center;
+
+    color: #ef4444;
+
+    font-size: 13px;
+
+    margin-top: 15px;
+
+    min-height: 18px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .modal-content {
+        padding: 28px 22px;
+    }
+
+}

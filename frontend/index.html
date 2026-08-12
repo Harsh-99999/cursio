@@ -27,6 +27,37 @@
             New Chat
         </button>
 
+        <!-- AUTH -->
+        <div class="auth-section">
+
+            <button
+                    id="loginButton"
+                    class="auth-button"
+                    onclick="openAuthModal('login')">
+                Login
+            </button>
+
+            <button
+                    id="registerButton"
+                    class="auth-button register-button"
+                    onclick="openAuthModal('register')">
+                Register
+            </button>
+
+            <button
+                    id="logoutButton"
+                    class="auth-button logout-button"
+                    onclick="logoutUser()"
+                    style="display:none;">
+                Logout
+            </button>
+
+            <div id="userStatus" class="user-status">
+                Not logged in
+            </div>
+
+        </div>
+
         <div class="sidebar-title">
             AI Assistant
         </div>
@@ -61,7 +92,6 @@
         <!-- CHAT -->
         <section id="chatBox" class="chat-box">
 
-            <!-- Welcome message -->
             <div class="message bot-message">
 
                 <div class="avatar">
@@ -75,6 +105,7 @@
                     </div>
 
                     <div class="bubble">
+
                         <p>
                             Hello! 👋
                         </p>
@@ -83,6 +114,7 @@
                             I'm Cursio, your AI assistant.
                             Ask me anything and I'll try my best to help you.
                         </p>
+
                     </div>
 
                 </div>
@@ -98,18 +130,18 @@
             <div class="input-box">
 
                 <textarea
-                    id="messageInput"
-                    placeholder="Message Cursio..."
-                    rows="1"
-                    autocomplete="off"
-                ></textarea>
+                        id="messageInput"
+                        placeholder="Message Cursio..."
+                        rows="1"
+                        autocomplete="off"></textarea>
 
                 <button
-                    id="sendButton"
-                    onclick="sendMessage()"
-                    title="Send message"
-                >
+                        id="sendButton"
+                        onclick="sendMessage()"
+                        title="Send message">
+
                     ➤
+
                 </button>
 
             </div>
@@ -125,7 +157,106 @@
 </div>
 
 
+<!-- =====================================================
+     AUTH MODAL
+     ===================================================== -->
+
+<div id="authModal" class="modal">
+
+    <div class="modal-content">
+
+        <button
+                class="close-button"
+                onclick="closeAuthModal()">
+            ×
+        </button>
+
+        <div class="modal-logo">
+            C
+        </div>
+
+        <h2 id="authTitle">
+            Login to Cursio
+        </h2>
+
+        <p id="authSubtitle">
+            Welcome back!
+        </p>
+
+
+        <form id="authForm">
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter username"
+                        required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required>
+
+            </div>
+
+
+            <button
+                    type="submit"
+                    id="authSubmitButton"
+                    class="auth-submit">
+
+                Login
+
+            </button>
+
+        </form>
+
+
+        <div class="auth-switch">
+
+            <span id="authSwitchText">
+                Don't have an account?
+            </span>
+
+            <button
+                    type="button"
+                    id="authSwitchButton"
+                    onclick="switchAuthMode()">
+
+                Register
+
+            </button>
+
+        </div>
+
+        <div
+                id="authError"
+                class="auth-error">
+        </div>
+
+    </div>
+
+</div>
+
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
