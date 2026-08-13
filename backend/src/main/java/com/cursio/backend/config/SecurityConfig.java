@@ -43,11 +43,29 @@ public class SecurityConfig {
                 )
 
                 .authorizeHttpRequests(auth -> auth
+
+                        // =========================
+                        // PUBLIC FRONTEND
+                        // =========================
+                        .requestMatchers(
+                                "/",
+                                "/index.html",
+                                "/style.css",
+                                "/script.js",
+                                "/favicon.ico"
+                        ).permitAll()
+
+                        // =========================
+                        // PUBLIC AUTH
+                        // =========================
                         .requestMatchers(
                                 "/auth/register",
                                 "/auth/login"
                         ).permitAll()
 
+                        // =========================
+                        // EVERYTHING ELSE
+                        // =========================
                         .anyRequest().authenticated()
                 )
 

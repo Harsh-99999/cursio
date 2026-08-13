@@ -7,7 +7,7 @@
 
     <title>Cursio AI</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -20,43 +20,49 @@
 
         <div class="brand">
 
-            <div class="brand-icon">
+            <div class="brand-logo">
                 <span>C</span>
             </div>
 
-            <div class="brand-text">
-                <span class="brand-name">Cursio</span>
-                <span class="brand-version">AI Assistant</span>
+            <div class="brand-info">
+                <div class="brand-name">Cursio</div>
+                <div class="brand-subtitle">AI Assistant</div>
             </div>
 
         </div>
 
 
-        <button class="new-chat" onclick="newChat()">
+        <button class="new-chat" id="newChatButton" type="button">
 
-            <span class="new-chat-icon">+</span>
+            <span class="new-chat-plus">+</span>
 
-            <span>New conversation</span>
+            <span class="new-chat-text">
+                New conversation
+            </span>
 
-            <span class="new-chat-shortcut">⌘ N</span>
+            <span class="shortcut">
+                Ctrl N
+            </span>
 
         </button>
 
 
-        <!-- AUTH -->
+        <!-- ACCOUNT -->
 
-        <div class="auth-section">
+        <div class="sidebar-section account-section">
 
-            <div class="auth-label">
+            <div class="section-label">
                 ACCOUNT
             </div>
 
+
             <button
                     id="loginButton"
-                    class="auth-button"
-                    onclick="openAuthModal('login')">
+                    class="sidebar-button"
+                    type="button">
 
-                <span class="auth-icon">↪</span>
+                <span class="button-icon">↪</span>
+
                 <span>Sign in</span>
 
             </button>
@@ -64,10 +70,11 @@
 
             <button
                     id="registerButton"
-                    class="auth-button register-button"
-                    onclick="openAuthModal('register')">
+                    class="sidebar-button register-button"
+                    type="button">
 
-                <span class="auth-icon">✦</span>
+                <span class="button-icon">✦</span>
+
                 <span>Create account</span>
 
             </button>
@@ -75,45 +82,57 @@
 
             <button
                     id="logoutButton"
-                    class="auth-button logout-button"
-                    onclick="logoutUser()"
-                    style="display:none;">
+                    class="sidebar-button logout-button"
+                    type="button"
+                    style="display: none;">
 
-                <span class="auth-icon">↪</span>
+                <span class="button-icon">↪</span>
+
                 <span>Sign out</span>
 
             </button>
 
 
             <div id="userStatus" class="user-status">
+
                 <span class="status-dot"></span>
-                <span>Not logged in</span>
+
+                <span class="status-text">
+                    Not logged in
+                </span>
+
             </div>
 
         </div>
 
 
-        <div class="sidebar-divider"></div>
+        <div class="divider"></div>
 
+
+        <!-- WORKSPACE -->
 
         <div class="sidebar-section">
 
-            <div class="sidebar-section-title">
+            <div class="section-label">
                 WORKSPACE
             </div>
 
-            <div class="sidebar-item active">
+            <div class="workspace-item active">
 
-                <span class="sidebar-item-icon">✧</span>
+                <span class="workspace-icon">
+                    ✧
+                </span>
 
-                <span>AI Assistant</span>
+                <span>
+                    AI Assistant
+                </span>
 
             </div>
 
         </div>
 
 
-        <!-- BOTTOM INFO -->
+        <!-- SIDEBAR BOTTOM -->
 
         <div class="sidebar-bottom">
 
@@ -129,13 +148,13 @@
                         POWERED BY
                     </span>
 
-                    <strong>
+                    <span class="model-name">
                         Gemini 2.5 Flash
-                    </strong>
+                    </span>
 
                 </div>
 
-                <span class="model-status"></span>
+                <span class="model-online"></span>
 
             </div>
 
@@ -159,65 +178,68 @@
 
     <main class="main">
 
-
         <!-- HEADER -->
 
         <header class="header">
 
-            <div class="header-left">
+            <div class="mobile-brand">
 
-                <div class="mobile-brand">
-                    <div class="mobile-brand-icon">C</div>
-                    <span>Cursio</span>
+                <div class="mobile-logo">
+                    C
                 </div>
 
-                <div class="header-title">
-
-                    <h1>
-                        Cursio AI
-                    </h1>
-
-                    <p>
-                        Your intelligent AI assistant
-                    </p>
-
-                </div>
+                <span>
+                    Cursio
+                </span>
 
             </div>
 
 
-            <div class="header-right">
+            <div class="header-title">
 
-                <div class="connection">
+                <h1>
+                    Cursio AI
+                </h1>
 
-                    <span class="connection-dot"></span>
+                <p>
+                    Your intelligent AI assistant
+                </p>
 
-                    <span>Online</span>
+            </div>
 
-                </div>
+
+            <div class="connection">
+
+                <span class="connection-dot"></span>
+
+                <span>
+                    Online
+                </span>
 
             </div>
 
         </header>
 
 
-        <!-- ================= CHAT ================= -->
+        <!-- CHAT -->
 
-        <section id="chatBox" class="chat-box">
+        <section
+                id="chatBox"
+                class="chat-box">
 
-            <div class="welcome-container">
+            <div class="welcome">
 
-                <div class="welcome-icon">
+                <div class="welcome-logo">
                     C
                 </div>
 
-                <div class="welcome-title">
+                <h2>
                     Welcome to Cursio
-                </div>
+                </h2>
 
-                <div class="welcome-subtitle">
+                <p>
                     Your intelligent AI assistant
-                </div>
+                </p>
 
             </div>
 
@@ -228,21 +250,19 @@
                     C
                 </div>
 
+                <div class="message-content">
 
-                <div class="message-body">
+                    <div class="message-header">
 
-                    <div class="message-meta">
-
-                        <div class="name">
+                        <span class="message-name">
                             Cursio
-                        </div>
+                        </span>
 
-                        <div class="message-time">
+                        <span class="message-tag">
                             AI
-                        </div>
+                        </span>
 
                     </div>
-
 
                     <div class="bubble">
 
@@ -264,9 +284,9 @@
         </section>
 
 
-        <!-- ================= INPUT ================= -->
+        <!-- INPUT -->
 
-        <div class="input-container">
+        <div class="input-area">
 
             <div class="input-wrapper">
 
@@ -274,25 +294,28 @@
 
                     <textarea
                             id="messageInput"
-                            placeholder="Message Cursio..."
                             rows="1"
-                            autocomplete="off"></textarea>
+                            placeholder="Message Cursio..."
+                            autocomplete="off"
+                            spellcheck="true"></textarea>
 
 
                     <button
                             id="sendButton"
-                            onclick="sendMessage()"
-                            title="Send message"
-                            aria-label="Send message">
+                            type="button"
+                            aria-label="Send message"
+                            title="Send message">
 
-                        <span>↑</span>
+                        <span>
+                            ↑
+                        </span>
 
                     </button>
 
                 </div>
 
 
-                <div class="input-footer">
+                <div class="input-hints">
 
                     <span>
                         ↵ Enter to send
@@ -307,9 +330,9 @@
             </div>
 
 
-            <p class="disclaimer">
+            <div class="disclaimer">
                 Cursio may make mistakes. Check important information.
-            </p>
+            </div>
 
         </div>
 
@@ -322,14 +345,17 @@
      AUTH MODAL
      ===================================================== -->
 
-<div id="authModal" class="modal">
+<div
+        id="authModal"
+        class="modal"
+        aria-hidden="true">
 
-    <div class="modal-content">
-
+    <div class="modal-card">
 
         <button
+                id="closeAuthButton"
                 class="close-button"
-                onclick="closeAuthModal()"
+                type="button"
                 aria-label="Close">
 
             ×
@@ -337,15 +363,18 @@
         </button>
 
 
-        <div class="modal-top">
+        <div class="modal-header">
 
             <div class="modal-logo">
                 C
             </div>
 
-            <div class="security-badge">
-                <span>●</span>
+            <div class="secure-label">
+
+                <span class="secure-dot"></span>
+
                 Secure authentication
+
             </div>
 
         </div>
@@ -355,7 +384,6 @@
             Login to Cursio
         </h2>
 
-
         <p id="authSubtitle">
             Welcome back!
         </p>
@@ -363,22 +391,21 @@
 
         <form id="authForm">
 
-
             <div class="form-group">
 
                 <label for="username">
                     Username
                 </label>
 
-                <div class="input-field">
+                <div class="field">
 
                     <span class="field-icon">
                         @
                     </span>
 
                     <input
-                            type="text"
                             id="username"
+                            type="text"
                             placeholder="Enter your username"
                             autocomplete="username"
                             required>
@@ -394,15 +421,15 @@
                     Password
                 </label>
 
-                <div class="input-field">
+                <div class="field">
 
                     <span class="field-icon">
                         ◈
                     </span>
 
                     <input
-                            type="password"
                             id="password"
+                            type="password"
                             placeholder="Enter your password"
                             autocomplete="current-password"
                             required>
@@ -413,13 +440,15 @@
 
 
             <button
-                    type="submit"
                     id="authSubmitButton"
-                    class="auth-submit">
+                    class="submit-button"
+                    type="submit">
 
-                <span>Login</span>
+                <span id="authSubmitText">
+                    Login
+                </span>
 
-                <span class="submit-arrow">
+                <span>
                     →
                 </span>
 
@@ -435,9 +464,8 @@
             </span>
 
             <button
-                    type="button"
                     id="authSwitchButton"
-                    onclick="switchAuthMode()">
+                    type="button">
 
                 Register
 
@@ -454,7 +482,9 @@
 
         <div class="modal-security">
 
-            <span>🔒</span>
+            <span>
+                🔒
+            </span>
 
             <span>
                 Your connection is protected
@@ -467,7 +497,7 @@
 </div>
 
 
-<script src="script.js"></script>
+<script src="/script.js"></script>
 
 </body>
 
