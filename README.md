@@ -1,6 +1,6 @@
 An intelligent AI assistant designed to interact with users, understand natural-language requests, and perform tasks through a modern web interface.
 
-🚀 Overview
+Overview
 
 Cursio AI is a full-stack AI assistant project built to explore how modern AI systems can understand user requests and execute useful actions.
 
